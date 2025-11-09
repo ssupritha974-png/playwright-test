@@ -1,5 +1,5 @@
 import {test as baseTest} from '../fixtures/pom-fixture';
-import CommonUtils from '../utils/commonUtils';
+import CommonUtils from '../utils/CommonUtils';
 
 type CommonFixtureType = {
     commonUtils : CommonUtils;

@@ -55,7 +55,7 @@ export default defineConfig({
       name: 'chromium',
       dependencies:['Setup'],
       use: { ...devices['Desktop Chrome'],
-        storageState:'./paywright/.auth/auth.json',
+        storageState:'./playwright/.auth/auth.json',
        },
     },
 
@@ -63,7 +63,7 @@ export default defineConfig({
       name: 'firefox',
       dependencies:['Setup'],
       use: { ...devices['Desktop Firefox'],
-        storageState:'./paywright/.auth/auth.json',
+        storageState:'./playwright/.auth/auth.json',
        },
     },
 
@@ -71,7 +71,7 @@ export default defineConfig({
       name: 'webkit',
       dependencies:['Setup'],
       use: { ...devices['Desktop Safari'],
-        storageState:'./paywright/.auth/auth.json',
+        storageState:'./playwright/.auth/auth.json',
        },
     },
 

@@ -1,12 +1,12 @@
+import { Page } from '@playwright/test';
+import {test as baseTest} from '../fixtures/common-fixture';
 import { LoginPage } from '../pages/LoginPage';
 import { UserPage } from '../pages/UserPage';
-import { test as baseTest } from './common-fixture';
-
+ 
 type HooksFixtureType = {
- gotoUrl: ()=> Promise<void>;
- logout: ()=> Promise<void>;
+ gotoUrl: ({ page }: { page: Page }, use: (r: any) => Promise<void>) => Promise<void>;
+ logout: ({ page }: { page: Page }, use: (r: any) => Promise<void>) => Promise<void>;
 };
-
 export const test = baseTest.extend<HooksFixtureType>({
  gotoUrl: async ({ page }, use) => {
    const loginPage = new LoginPage(page);
