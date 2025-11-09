@@ -1,0 +1,6 @@
+{
+    "invalid_password" : "adminwrong123",
+    "invalid_username" : "adminabc",
+    "invalid_cred_text" : "Invalid credentials",
+    "OrangeHRM_Title" : "OrangeHRM"
+}
