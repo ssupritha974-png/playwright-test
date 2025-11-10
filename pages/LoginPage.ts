@@ -19,7 +19,7 @@ export class LoginPage{
      * To open and lanuch the page OrangeHRM
      */
     async gotoOrangeHRM(){
-        await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        await this.page.goto(process.env.BASE_URL!);
     }
 
     /**
