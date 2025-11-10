@@ -20,6 +20,14 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm ci
+    - name: Run Playwright tests
+      run: |
+        SNAPSHOT_FOLDERS=$(find tests -type d -name "*-snapshots")
+        if [ -z "$SNAPSHOT_FOLDERS" ]; then
+        echo " No snapshots found — generating all baseline images..."
+        npx playwright test --update-snapshots
+        fi
+        npx playwright test  
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
